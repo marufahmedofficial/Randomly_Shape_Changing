@@ -11,7 +11,7 @@ class _StateManagementState extends State<StateManagement> {
   double _width = 100;
   double _height = 100;
   final random = Random.secure();
-  int a = 250, r = 200, g = 200, b = 200;
+  int a = 150, r = 200, g = 200, b = 200;
   double topleft = 10;
   double topright = 10;
   double buttomleft = 10;
@@ -22,12 +22,18 @@ class _StateManagementState extends State<StateManagement> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        title: Text('State Management'),
+        title: const Text('State Management'),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.indigoAccent,
+        splashColor: Colors.purple,
+        hoverColor: Colors.orange,
+
         onPressed: _changeContainer,
-        child: Text('Change'),
+        label : const Text('Change'),
+        icon: const Icon(Icons.change_circle) ,
       ),
       body: Center(
         child: AnimatedContainer(
