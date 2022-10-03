@@ -24,7 +24,22 @@ class _StateManagementState extends State<StateManagement> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        title: const Text('State Management'),
+        title: const Text('Changing Shapes'),
+        flexibleSpace:
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.purple,Colors.redAccent],
+                begin: Alignment.bottomRight,
+                end : Alignment.topLeft,
+              )
+          ),
+        ),
+        centerTitle: true,
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular((20))),
+        // ),
+
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.indigoAccent,
