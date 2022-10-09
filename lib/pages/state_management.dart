@@ -32,13 +32,17 @@ class _StateManagementState extends State<StateManagement> {
                 colors: [Colors.purple,Colors.redAccent],
                 begin: Alignment.bottomRight,
                 end : Alignment.topLeft,
-              )
+              ),
+                  borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(40),bottomRight: Radius.circular(40)
+          )
+
           ),
         ),
         centerTitle: true,
-        // shape: RoundedRectangleBorder(
-        //   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular((20))),
-        // ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40),bottomRight: Radius.circular((40))),
+        ),
 
       ),
       floatingActionButton: FloatingActionButton.extended(
