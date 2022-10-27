@@ -24,6 +24,7 @@ class _StateManagementState extends State<StateManagement> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
+
         title: const Text('Changing Shapes'),
         flexibleSpace:
         Container(
@@ -45,7 +46,8 @@ class _StateManagementState extends State<StateManagement> {
         ),
 
       ),
-      floatingActionButton: FloatingActionButton.extended(
+        floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.indigoAccent,
         splashColor: Colors.purple,
         hoverColor: Colors.orange,
@@ -55,19 +57,22 @@ class _StateManagementState extends State<StateManagement> {
         icon: const Icon(Icons.change_circle) ,
       ),
       body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeInOut,
-          width: _width,
-          height: _height,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(topleft),
-              topRight: Radius.circular(topright),
-              bottomLeft: Radius.circular(buttomleft),
-              bottomRight: Radius.circular(buttomright),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            width: _width,
+            height: _height,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(topleft),
+                topRight: Radius.circular(topright),
+                bottomLeft: Radius.circular(buttomleft),
+                bottomRight: Radius.circular(buttomright),
+              ),
+              color: Color.fromARGB(a, r, g, b),
             ),
-            color: Color.fromARGB(a, r, g, b),
           ),
         ),
       ),
