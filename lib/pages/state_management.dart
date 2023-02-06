@@ -40,7 +40,6 @@ class _StateManagementState extends State<StateManagement> {
 
           ),
         ),
-        centerTitle: true,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40),bottomRight: Radius.circular((40))),
         ),
