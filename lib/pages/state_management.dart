@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+
 class StateManagement extends StatefulWidget {
   const StateManagement({Key? key}) : super(key: key);
 
@@ -17,44 +18,38 @@ class _StateManagementState extends State<StateManagement> {
   double buttomleft = 10;
   double buttomright = 10;
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-
         title: const Text('Changing Shapes'),
-        flexibleSpace:
-        Container(
-          decoration: BoxDecoration(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.purple,Colors.redAccent],
+                colors: [Colors.purple, Colors.redAccent],
                 begin: Alignment.bottomRight,
-                end : Alignment.topLeft,
+                end: Alignment.topLeft,
               ),
-                  borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(40),bottomRight: Radius.circular(40)
-          )
-
-          ),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40))),
         ),
         centerTitle: true,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40),bottomRight: Radius.circular((40))),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(40),
+              bottomRight: Radius.circular((40))),
         ),
-
       ),
-        floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-       floatingActionButton: FloatingActionButton.extended(
+      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+      floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.indigoAccent,
         splashColor: Colors.purple,
         hoverColor: Colors.orange,
-
         onPressed: _changeContainer,
-        label : const Text('Change'),
-        icon: const Icon(Icons.change_circle) ,
+        label: const Text('Change'),
+        icon: const Icon(Icons.change_circle),
       ),
       body: Center(
         child: Padding(
@@ -79,20 +74,18 @@ class _StateManagementState extends State<StateManagement> {
     );
   }
 
-
   void _changeContainer() {
     setState(() {
-      _width = random.nextInt(251)+50.toDouble();
-      _height = random.nextInt(251)+50.toDouble();
-      topleft = random.nextInt(251)+50.toDouble();
-      topright = random.nextInt(251)+50.toDouble();
-      buttomleft = random.nextInt(251)+50.toDouble();
-      buttomright = random.nextInt(251)+50.toDouble();
+      _width = random.nextInt(251) + 50.toDouble();
+      _height = random.nextInt(251) + 50.toDouble();
+      topleft = random.nextInt(251) + 50.toDouble();
+      topright = random.nextInt(251) + 50.toDouble();
+      buttomleft = random.nextInt(251) + 50.toDouble();
+      buttomright = random.nextInt(251) + 50.toDouble();
       a = random.nextInt(255);
       r = random.nextInt(255);
       g = random.nextInt(255);
       b = random.nextInt(255);
-
     });
   }
 }

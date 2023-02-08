@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/state_management.dart';
+import 'package:random_shape_changing/pages/state_management.dart';
 
 void main() {
- runApp(MyApp());
+ runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: StateManagement(),
+      home: const StateManagement(),
     );
   }
 }
